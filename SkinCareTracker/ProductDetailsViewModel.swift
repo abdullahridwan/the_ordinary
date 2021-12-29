@@ -23,7 +23,8 @@ class ProductDetailsViewModel: ObservableObject {
     
     func get_details(name: String ) -> String {
         //Need to make some osrt of api or something bc this is getting ridiculous
-        return "Info on this item coming soon!"
+        //Description section and Uses section? idk yet tbh
+        return "Info on this item coming soon! 🎉"
     }
     
     

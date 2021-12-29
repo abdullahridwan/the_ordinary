@@ -8,24 +8,34 @@
 import SwiftUI
 
 struct ProductDetailsView: View {
-    @StateObject var pdViewModel = ProductDetailsViewModel(name: "Niacinamide", image: Image("rdn-niacinamide-10pct-zinc-1pct-30ml"))
+    @StateObject var pdViewModel = ProductDetailsViewModel(name: "Niacinamide", image: Image("TestImage"))
     
     
     var body: some View {
         ZStack {
             Color("Background")
                 .edgesIgnoringSafeArea(.all)
-            VStack{
-                pdViewModel.image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .edgesIgnoringSafeArea(.top)
-                
-                ProductInfo(pdViewModel: pdViewModel)
-                    .offset(y: -40.0)
-                
-                
+            ScrollView {
+                VStack{
+                    pdViewModel.image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.top)
+                    
+                    ProductInfo(pdViewModel: pdViewModel)
+                        .offset(y: -100.0)
+                }
             }
+            .edgesIgnoringSafeArea(.all)
+//            .navigationBarBackButtonHidden(true)
+//            .navigationBarItems(leading:
+//                                    Image(systemName: "chevron.backward")
+//                                    .frame(width: 7.0, height: 7.0)
+//                                        .padding(.all, 12)
+//                                        .background(Color.white)
+//                                        .cornerRadius(8.0)
+//            )
+            
         }
     }
 }
@@ -42,15 +52,17 @@ struct ProductInfo: View {
         VStack(alignment: .leading){
             Text(pdViewModel.name)
                 .font(.title)
-                .fontWeight(.light)
+                .fontWeight(.semibold)
+                .padding()
+                //.shadow(radius: 0.4)
             Text(pdViewModel.get_details(name: pdViewModel.name))
-            HStack{
-                Spacer()
-            }
+                .padding()
+            HStack{Spacer()}
+            Spacer()
         }
         .padding()
         .padding(.top)
-        .background(Color.red)
-        .cornerRadius(48.0)
+        .background(Color("Background"))
+        .cornerRadius(40.0)
     }
 }
