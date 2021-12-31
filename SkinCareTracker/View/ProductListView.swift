@@ -117,6 +117,7 @@ struct AllProducts: View {
             }
             .onAppear {
                 UITableView.appearance().backgroundColor =  UIColor(named: "Background")
+                productListViewModel.getAllProducts()
             }
             .navigationBarTitle("All Items")
             .navigationBarItems(leading: EditButton(), trailing: addButton)
@@ -133,18 +134,28 @@ struct AllProducts: View {
     private var addButton: some View {
         switch editMode {
         case .inactive:
-            return AnyView(Button(action: onAdd) { Image(systemName: "plus") })
+            return AnyView(Button(action: {
+                onAdd()
+                productListViewModel.getAllProducts()
+            }) { Image(systemName: "plus") })
         default:
             return AnyView(EmptyView())
         }
     }
     
     
-    func onAdd() {
-        showingSheet.toggle()
+    private func onAdd() {
+        //showingSheet.toggle()
+        //save an item. just test it out by saving a random item for now
+        productListViewModel.addProduct(p: Product(name: "Product that was saved", frequency: "Fri", dayOrNight: "Night"))
     }
     private func onDelete(offsets: IndexSet) {
         productListViewModel.productList.remove(atOffsets: offsets)
+        //delete for realsies
+        offsets.forEach { index in
+            let sp = productListViewModel.productList[index]
+            productListViewModel.deleteProduct(sp)
+        }
     }
     private func onMove(source: IndexSet, destination: Int) {
         productListViewModel.productList.move(fromOffsets: source, toOffset: destination)
