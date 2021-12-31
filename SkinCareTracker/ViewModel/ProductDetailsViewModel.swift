@@ -10,7 +10,7 @@ import SwiftUI
 
 
 
-class ProductDetailsViewModel: ObservableObject {
+final class ProductDetailsViewModel: ObservableObject {
     @Published var name: String
     @Published var image: Image
     @Published var details: String

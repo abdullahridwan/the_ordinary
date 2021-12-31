@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50B33C8277D23F100582D98 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B33C7277D23F100582D98 /* ProductListView.swift */; };
+		B50B33CA277D261700582D98 /* NavbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B33C9277D261700582D98 /* NavbarViewModel.swift */; };
+		B50B33CD277D2B7700582D98 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B33CC277D2B7700582D98 /* NavbarView.swift */; };
+		B50B33D0277D2C3200582D98 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B33CF277D2C3200582D98 /* ProductListViewModel.swift */; };
+		B50B33D4277D2F8200582D98 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B33D3277D2F8200582D98 /* ProfileViewModel.swift */; };
+		B50B33D6277D2FE400582D98 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B33D5277D2FE400582D98 /* ProfileView.swift */; };
+		B50B33D9277D31D400582D98 /* HeadBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B33D8277D31D400582D98 /* HeadBar.swift */; };
+		B581C095277EA8BA00BF6892 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581C094277EA8BA00BF6892 /* SheetView.swift */; };
 		B5825748277CC55D001D5FFD /* SkinCareTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5825747277CC55D001D5FFD /* SkinCareTrackerApp.swift */; };
 		B582574A277CC55D001D5FFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5825749277CC55D001D5FFD /* ContentView.swift */; };
 		B582574C277CC55E001D5FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B582574B277CC55E001D5FFD /* Assets.xcassets */; };
@@ -38,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B50B33C7277D23F100582D98 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		B50B33C9277D261700582D98 /* NavbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarViewModel.swift; sourceTree = "<group>"; };
+		B50B33CC277D2B7700582D98 /* NavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
+		B50B33CF277D2C3200582D98 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		B50B33D3277D2F8200582D98 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		B50B33D5277D2FE400582D98 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B50B33D8277D31D400582D98 /* HeadBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadBar.swift; sourceTree = "<group>"; };
+		B581C094277EA8BA00BF6892 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		B5825744277CC55D001D5FFD /* SkinCareTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkinCareTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5825747277CC55D001D5FFD /* SkinCareTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinCareTrackerApp.swift; sourceTree = "<group>"; };
 		B5825749277CC55D001D5FFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +95,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B50B33CB277D2B6900582D98 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5825771277CC58B001D5FFD /* HomePageView.swift */,
+				B5825775277CD782001D5FFD /* ProductDetailsView.swift */,
+				B50B33CC277D2B7700582D98 /* NavbarView.swift */,
+				B50B33C7277D23F100582D98 /* ProductListView.swift */,
+				B50B33D5277D2FE400582D98 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B50B33CE277D2BEC00582D98 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5825773277CCA46001D5FFD /* HomePageViewModel.swift */,
+				B5825777277CDA7B001D5FFD /* ProductDetailsViewModel.swift */,
+				B50B33C9277D261700582D98 /* NavbarViewModel.swift */,
+				B50B33CF277D2C3200582D98 /* ProductListViewModel.swift */,
+				B50B33D3277D2F8200582D98 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B50B33D7277D31B300582D98 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B50B33D8277D31D400582D98 /* HeadBar.swift */,
+				B581C094277EA8BA00BF6892 /* SheetView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		B582573B277CC55D001D5FFD = {
 			isa = PBXGroup;
 			children = (
@@ -102,14 +151,13 @@
 		B5825746277CC55D001D5FFD /* SkinCareTracker */ = {
 			isa = PBXGroup;
 			children = (
+				B50B33D7277D31B300582D98 /* Utilities */,
+				B50B33CE277D2BEC00582D98 /* ViewModel */,
+				B50B33CB277D2B6900582D98 /* View */,
 				B5825747277CC55D001D5FFD /* SkinCareTrackerApp.swift */,
 				B5825749277CC55D001D5FFD /* ContentView.swift */,
 				B582574B277CC55E001D5FFD /* Assets.xcassets */,
 				B582574D277CC55E001D5FFD /* Preview Content */,
-				B5825771277CC58B001D5FFD /* HomePageView.swift */,
-				B5825773277CCA46001D5FFD /* HomePageViewModel.swift */,
-				B5825775277CD782001D5FFD /* ProductDetailsView.swift */,
-				B5825777277CDA7B001D5FFD /* ProductDetailsViewModel.swift */,
 			);
 			path = SkinCareTracker;
 			sourceTree = "<group>";
@@ -270,11 +318,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5825774277CCA46001D5FFD /* HomePageViewModel.swift in Sources */,
+				B50B33D6277D2FE400582D98 /* ProfileView.swift in Sources */,
 				B582574A277CC55D001D5FFD /* ContentView.swift in Sources */,
+				B50B33C8277D23F100582D98 /* ProductListView.swift in Sources */,
 				B5825772277CC58B001D5FFD /* HomePageView.swift in Sources */,
 				B5825748277CC55D001D5FFD /* SkinCareTrackerApp.swift in Sources */,
+				B50B33CD277D2B7700582D98 /* NavbarView.swift in Sources */,
+				B50B33D4277D2F8200582D98 /* ProfileViewModel.swift in Sources */,
+				B581C095277EA8BA00BF6892 /* SheetView.swift in Sources */,
+				B50B33D0277D2C3200582D98 /* ProductListViewModel.swift in Sources */,
 				B5825776277CD782001D5FFD /* ProductDetailsView.swift in Sources */,
+				B50B33CA277D261700582D98 /* NavbarViewModel.swift in Sources */,
 				B5825778277CDA7B001D5FFD /* ProductDetailsViewModel.swift in Sources */,
+				B50B33D9277D31D400582D98 /* HeadBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

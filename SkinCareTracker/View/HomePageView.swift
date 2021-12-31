@@ -9,32 +9,22 @@ import SwiftUI
 
 struct HomePageView: View {
     @StateObject private var viewModel = HomePageViewModel()
-    
+    @StateObject var viewRouter: ViewRouter
     var body: some View {
         NavigationView {
             ZStack{
                 Color("Background")
                     .edgesIgnoringSafeArea(.all)
                 VStack(alignment: .leading) {
-                    HeadBar()
+                    HeadBar(title: "Today's Routine")
                     //SearchBar()
+                    //add the day capsule thing.
                     ItemsList(viewModel: viewModel)
-                    NavBar()
+                    Spacer()
+                    NavbarView(viewRouter: viewRouter)
                 }
             }
-            .edgesIgnoringSafeArea(.bottom)
-//            .navigationBarTitle("", displayMode: .inline)
-//            .navigationBarHidden(true)
-//            .navigationBarBackButtonHidden(true)
-//            .navigationBarItems(leading:
-//                                    Image(systemName: "chevron.backward").padding(.leading, 50).background(Color.black).cornerRadius(8.0))
-                
-            
-            
-            
-            
-            
-        
+            .edgesIgnoringSafeArea([.top, .bottom])
         }
         
         
@@ -43,7 +33,7 @@ struct HomePageView: View {
 
 struct HomePageView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView()
+        HomePageView(viewRouter: ViewRouter())
     }
 }
 
@@ -73,7 +63,6 @@ struct Card: View {
     let day: Bool
     
     var body: some View {
-        //Button(action: {}) {
             HStack{
                 image
                     .resizable()
@@ -101,63 +90,11 @@ struct Card: View {
             .padding(.horizontal)
             .padding(.vertical, 5)
             .shadow(color: Color.black.opacity(0.15), radius: 2, x: 0.6, y: 0.6)
-            
-        //}
     }
 }
 
-struct TabBarIcon: View {
-    let image: Image
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action:action){
-            image
-                .foregroundColor(Color("TextColor"))
-                .frame(maxWidth: .infinity)
-                
-        }
-//            .foregroundColor(Color.black)
-//            .padding(.all, 15)
-//            .background(Color.white)
-//            .cornerRadius(20.0)
-//            .shadow(color: Color.black.opacity(0.15), radius: 2, x: 0.6, y: 0.6)
-    }
-}
 
-struct HeadBar: View {
-    var body: some View {
-        HStack(){
-            Text("Today's Routine")
-                .font(.system(size: 35.0, weight: .heavy, design: .default))
-            Spacer()
-            Button(action: {}){
-                Image(systemName: "person.fill")
-                    .foregroundColor(Color.black)
-                    .padding()
-            }
-        }
-        .padding()
-        .padding(.top, 20)
-    }
-}
 
-struct NavBar: View {
-    var body: some View {
-        HStack{
-            TabBarIcon(image: Image(systemName: "list.dash")){}
-            TabBarIcon(image: Image(systemName: "house")){}
-            TabBarIcon(image: Image(systemName: "person")){}
-            TabBarIcon(image: Image(systemName: "gear")){}
-            
-        }
-        .padding()
-        .background(Color.white)
-        .clipShape(Capsule())
-        .padding()
-        .shadow(color: Color.black.opacity(0.25), radius: 3, x: 0.6, y: 0.6)
-    }
-}
 
 struct ItemsList: View {
     @StateObject var viewModel: HomePageViewModel

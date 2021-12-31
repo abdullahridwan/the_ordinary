@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SkinCareTrackerApp: App {
+    @StateObject var viewRouter = ViewRouter()
+    @StateObject var productListViewModel = ProductListViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewRouter: viewRouter, productListViewModel: productListViewModel)
         }
     }
 }

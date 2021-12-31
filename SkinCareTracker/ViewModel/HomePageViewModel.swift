@@ -10,7 +10,7 @@ import SwiftUI
 
 
 
-class HomePageViewModel: ObservableObject {
+final class HomePageViewModel: ObservableObject {
     @Published var items: [String] = ["rdn-natural-moisturizing-factors-ha-30ml", "rdn-niacinamide-10pct-zinc-1pct-30ml", "rdn-squalane-cleanser-50ml"]
     
     
