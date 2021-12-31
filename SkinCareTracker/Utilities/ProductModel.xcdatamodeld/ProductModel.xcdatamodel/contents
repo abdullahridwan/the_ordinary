@@ -3,10 +3,11 @@
     <entity name="ProductData" representedClassName="ProductData" syncable="YES" codeGenerationType="class">
         <attribute name="dayOrNight" optional="YES" attributeType="String"/>
         <attribute name="frequency" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="name" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ProductData" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="ProductData" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

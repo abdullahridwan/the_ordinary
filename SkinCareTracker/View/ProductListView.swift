@@ -116,6 +116,7 @@ struct AllProducts: View {
                 
             }
             .onAppear {
+                //productListViewModel.deleteAll()
                 UITableView.appearance().backgroundColor =  UIColor(named: "Background")
                 productListViewModel.getAllProducts()
             }
@@ -147,14 +148,14 @@ struct AllProducts: View {
     private func onAdd() {
         //showingSheet.toggle()
         //save an item. just test it out by saving a random item for now
-        productListViewModel.addProduct(p: Product(name: "Product that was saved", frequency: "Fri", dayOrNight: "Night"))
+        productListViewModel.addProduct(p: Product(id: UUID(), name: "Product that was saved", frequency: "Fri", dayOrNight: "Night"))
     }
     private func onDelete(offsets: IndexSet) {
         productListViewModel.productList.remove(atOffsets: offsets)
         //delete for realsies
         offsets.forEach { index in
             let sp = productListViewModel.productList[index]
-            productListViewModel.deleteProduct(sp)
+            productListViewModel.deleteProductp(p: sp)
         }
     }
     private func onMove(source: IndexSet, destination: Int) {
