@@ -28,6 +28,8 @@
 		B5825774277CCA46001D5FFD /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5825773277CCA46001D5FFD /* HomePageViewModel.swift */; };
 		B5825776277CD782001D5FFD /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5825775277CD782001D5FFD /* ProductDetailsView.swift */; };
 		B5825778277CDA7B001D5FFD /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5825777277CDA7B001D5FFD /* ProductDetailsViewModel.swift */; };
+		B5B246BA27800E4F0011F47F /* AddProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B246B927800E4F0011F47F /* AddProduct.swift */; };
+		B5B246BC27800F950011F47F /* WeekFrequencyPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B246BB27800F950011F47F /* WeekFrequencyPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		B5825773277CCA46001D5FFD /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		B5825775277CD782001D5FFD /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
 		B5825777277CDA7B001D5FFD /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		B5B246B927800E4F0011F47F /* AddProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProduct.swift; sourceTree = "<group>"; };
+		B5B246BB27800F950011F47F /* WeekFrequencyPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekFrequencyPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				B581C094277EA8BA00BF6892 /* SheetView.swift */,
 				B5515FF6277F74F300F4530B /* CoreDataManager.swift */,
 				B5515FF8277F757300F4530B /* ProductModel.xcdatamodeld */,
+				B5B246B927800E4F0011F47F /* AddProduct.swift */,
+				B5B246BB27800F950011F47F /* WeekFrequencyPicker.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -325,9 +331,11 @@
 			files = (
 				B5825774277CCA46001D5FFD /* HomePageViewModel.swift in Sources */,
 				B50B33D6277D2FE400582D98 /* ProfileView.swift in Sources */,
+				B5B246BC27800F950011F47F /* WeekFrequencyPicker.swift in Sources */,
 				B582574A277CC55D001D5FFD /* ContentView.swift in Sources */,
 				B5515FFA277F757300F4530B /* ProductModel.xcdatamodeld in Sources */,
 				B5515FF7277F74F300F4530B /* CoreDataManager.swift in Sources */,
+				B5B246BA27800E4F0011F47F /* AddProduct.swift in Sources */,
 				B50B33C8277D23F100582D98 /* ProductListView.swift in Sources */,
 				B5825772277CC58B001D5FFD /* HomePageView.swift in Sources */,
 				B5825748277CC55D001D5FFD /* SkinCareTrackerApp.swift in Sources */,

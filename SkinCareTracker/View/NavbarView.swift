@@ -18,7 +18,7 @@ struct NavbarView: View {
                 viewRouter.currentPage = .home
             }
                 TabBarIcon(viewRouter: viewRouter, assignedPage: .profile,image: Image(systemName: "person")){
-                    viewRouter.currentPage = .list
+                    viewRouter.currentPage = .profile
                 }
         }
         .padding(.all, 3)
@@ -47,6 +47,7 @@ struct TabBarIcon: View {
         
         Button(action:{
             viewRouter.currentPage = assignedPage
+            print("Current page is \(viewRouter.currentPage) and the assigned page is \(assignedPage)")
         }){
             
             
