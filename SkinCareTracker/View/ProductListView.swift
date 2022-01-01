@@ -20,7 +20,6 @@ struct ProductListView: View {
                     Spacer()
                     NavbarView(viewRouter: viewRouter)
                 }
-                
             }
             .edgesIgnoringSafeArea([.top, .bottom])
         

@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+struct NewProduct{
+    var name: String
+    var frequency: String = ""
+    var dayOrNight:String = ""
+    var image: UIImage = UIImage(systemName: "gear")!
+}
+
 struct AddProduct: View {
     /*
      var id : UUID
@@ -15,14 +22,16 @@ struct AddProduct: View {
      var dayOrNight: String?
      var image: UIImage?
      */
-    @State var name: String = ""
+    @State var newProduct: NewProduct = NewP
+    
     
     var body: some View {
         NavigationView {
             Form {
-                TextField("Product Name", text: $name)
+                TextField("Product Name", text: $newProduct.name)
+                TextField("Frequency of Use", text: $newProduct.frequency)
             }
-            .navigationBarTitle("Settings")
+            .navigationBarTitle("Add a Product")
         }
     }
 }

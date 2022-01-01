@@ -18,6 +18,7 @@ struct Product: Hashable{
 }
 
 
+
 final class ProductListViewModel: ObservableObject {
     @Published var productList: [Product] = []
     
