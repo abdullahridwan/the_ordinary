@@ -99,6 +99,7 @@ struct AllProducts: View {
     @State private var editMode = EditMode.inactive
     @State private var showingSheet = false
     @StateObject var productListViewModel: ProductListViewModel
+    @State private var newProduct = Product(id: UUID(), name: "", frequency: "", dayOrNight: "", image: UIImage())
     
     var body: some View {
         NavigationView {
@@ -123,7 +124,7 @@ struct AllProducts: View {
             .navigationBarItems(leading: EditButton(), trailing: addButton)
             .environment(\.editMode, $editMode)
             .sheet(isPresented: $showingSheet) {
-                        SheetView()
+                        AddProduct(np: newProduct)
                     }
             
         }
@@ -145,9 +146,9 @@ struct AllProducts: View {
     
     
     private func onAdd() {
-        //showingSheet.toggle()
+        showingSheet.toggle()
         //save an item. just test it out by saving a random item for now
-        productListViewModel.addProduct(p: Product(id: UUID(), name: "Product that was saved", frequency: "Fri", dayOrNight: "Night"))
+        //productListViewModel.addProduct(p: Product(id: UUID(), name: "Product that was saved", frequency: "Fri", dayOrNight: "Night"))
     }
     private func onDelete(offsets: IndexSet) {
         productListViewModel.productList.remove(atOffsets: offsets)

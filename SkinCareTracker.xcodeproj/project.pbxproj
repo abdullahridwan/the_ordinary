@@ -16,6 +16,8 @@
 		B50B33D9277D31D400582D98 /* HeadBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50B33D8277D31D400582D98 /* HeadBar.swift */; };
 		B5515FF7277F74F300F4530B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5515FF6277F74F300F4530B /* CoreDataManager.swift */; };
 		B5515FFA277F757300F4530B /* ProductModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5515FF8277F757300F4530B /* ProductModel.xcdatamodeld */; };
+		B5704C672782086E00CD0980 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5704C662782086E00CD0980 /* ImagePicker.swift */; };
+		B5704C69278208B900CD0980 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5704C68278208B900CD0980 /* ImagePickerView.swift */; };
 		B581C095277EA8BA00BF6892 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581C094277EA8BA00BF6892 /* SheetView.swift */; };
 		B5825748277CC55D001D5FFD /* SkinCareTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5825747277CC55D001D5FFD /* SkinCareTrackerApp.swift */; };
 		B582574A277CC55D001D5FFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5825749277CC55D001D5FFD /* ContentView.swift */; };
@@ -59,6 +61,9 @@
 		B50B33D8277D31D400582D98 /* HeadBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadBar.swift; sourceTree = "<group>"; };
 		B5515FF6277F74F300F4530B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B5515FF9277F757300F4530B /* ProductModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductModel.xcdatamodel; sourceTree = "<group>"; };
+		B5704C662782086E00CD0980 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		B5704C68278208B900CD0980 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		B5704C6C27820D2E00CD0980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B581C094277EA8BA00BF6892 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		B5825744277CC55D001D5FFD /* SkinCareTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkinCareTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5825747277CC55D001D5FFD /* SkinCareTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinCareTrackerApp.swift; sourceTree = "<group>"; };
@@ -136,6 +141,8 @@
 				B5515FF8277F757300F4530B /* ProductModel.xcdatamodeld */,
 				B5B246B927800E4F0011F47F /* AddProduct.swift */,
 				B5B246BB27800F950011F47F /* WeekFrequencyPicker.swift */,
+				B5704C662782086E00CD0980 /* ImagePicker.swift */,
+				B5704C68278208B900CD0980 /* ImagePickerView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 		B5825746277CC55D001D5FFD /* SkinCareTracker */ = {
 			isa = PBXGroup;
 			children = (
+				B5704C6C27820D2E00CD0980 /* Info.plist */,
 				B50B33D7277D31B300582D98 /* Utilities */,
 				B50B33CE277D2BEC00582D98 /* ViewModel */,
 				B50B33CB277D2B6900582D98 /* View */,
@@ -333,9 +341,11 @@
 				B50B33D6277D2FE400582D98 /* ProfileView.swift in Sources */,
 				B5B246BC27800F950011F47F /* WeekFrequencyPicker.swift in Sources */,
 				B582574A277CC55D001D5FFD /* ContentView.swift in Sources */,
+				B5704C69278208B900CD0980 /* ImagePickerView.swift in Sources */,
 				B5515FFA277F757300F4530B /* ProductModel.xcdatamodeld in Sources */,
 				B5515FF7277F74F300F4530B /* CoreDataManager.swift in Sources */,
 				B5B246BA27800E4F0011F47F /* AddProduct.swift in Sources */,
+				B5704C672782086E00CD0980 /* ImagePicker.swift in Sources */,
 				B50B33C8277D23F100582D98 /* ProductListView.swift in Sources */,
 				B5825772277CC58B001D5FFD /* HomePageView.swift in Sources */,
 				B5825748277CC55D001D5FFD /* SkinCareTrackerApp.swift in Sources */,
@@ -510,8 +520,11 @@
 				DEVELOPMENT_TEAM = DP35G3JNX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkinCareTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need Access To Camera to get a picture";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -540,8 +553,11 @@
 				DEVELOPMENT_TEAM = DP35G3JNX9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkinCareTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need Access To Camera to get a picture";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

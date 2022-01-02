@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import UIKit
 import CoreData
 
@@ -16,6 +17,14 @@ struct Product: Hashable{
     var dayOrNight: String?
     var image: UIImage?
 }
+
+func ??<T>(lhs: Binding<Optional<T>>, rhs: T) -> Binding<T> {
+    Binding(
+        get: { lhs.wrappedValue ?? rhs },
+        set: { lhs.wrappedValue = $0 }
+    )
+}
+
 
 
 
@@ -101,3 +110,9 @@ final class ProductListViewModel: ObservableObject {
     
     
 }
+
+
+
+
+
+
